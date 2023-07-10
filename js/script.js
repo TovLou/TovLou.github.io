@@ -28,6 +28,10 @@ $(document).ready(function() {
     $("#footer").load("footer.html");
     $("#content-warning").load("content-warning.html");
 
+      $('.click-expand').on('click', function(){
+        $(this).find('.expand-title').toggleClass('opened closed');
+        $(this).find('.expand-text').toggleClass('hidden');
+    })
 });
 
 $(window).on('scroll', function () {
