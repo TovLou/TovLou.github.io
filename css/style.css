@@ -102,7 +102,7 @@ a:hover, a:focus {
 }
 
 #header li {
-    padding: 0 20px;
+    padding: 0 40px 0 0;
 }
 
 .content-warning {
@@ -226,6 +226,10 @@ a:hover, a:focus {
 
 .clear {
     clear: both;
+}
+
+.overflow-hidden {
+    overflow: hidden;
 }
 
 .container {
