@@ -243,6 +243,10 @@ a:hover, a:focus {
     max-width: 700px;
 }
 
+p strong {
+    font-weight: bold;
+}
+
 .right {
     float: right;
 }
