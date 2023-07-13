@@ -501,14 +501,12 @@ header {
     bottom: 0;
 }
 
-
 #about  {
-    padding: 5% 0 2% 0;
+    padding: 2% 0;
     max-width: 80rem;
     width: 90%;
     margin: 0 auto;
 }
-
 
 #about p {
   line-height: 2rem;
