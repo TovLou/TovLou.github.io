@@ -320,6 +320,9 @@ p strong {
 .width20{
     width: 20%;
 }
+.width25{
+    width: 25%;
+}
 .width30{
     width: 30%;
 }
@@ -1006,7 +1009,7 @@ figcaption .image-credit {
         text-align: left;
     }
 
-    .width20, .width30, .width40, .width45 ,.width50, .width60, .width70, .width80, .width90{
+    .width20, .width25, .width30, .width40, .width45 ,.width50, .width60, .width70, .width80, .width90{
         width: 100%;
     }
 
