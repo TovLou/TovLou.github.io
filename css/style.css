@@ -361,7 +361,7 @@ blockquote{
     font-size: 20px;
     line-height: 1.4;
     color: #666;
-    text-align: justify;
+    /*text-align: justify;*/
     border-left: 2px solid #657479;
     border-right: 2px solid #657479;
 /*    -moz-box-shadow: 2px 2px 15px #ccc;
