@@ -442,6 +442,10 @@ nav a:visited, .menu-item span {
     color: #645d52;
 }
 
+nav .sub-item a {
+    color: #898749;
+}
+
 #icon {
   display: inline-block;
   padding-top: 0.7rem;
@@ -505,6 +509,11 @@ header {
     top: 0;
     bottom: 0;
 }
+
+/*a.header-logo.logo-reverse {
+    right: 10%;
+    top: 50px;
+}*/
 
 #about, section.about  {
     padding: 2% 0;
@@ -604,15 +613,31 @@ nav li ul li {
     min-height: 260px;
     left: -10%;
     right: -10%;
-    width: 120%;
-    padding: 2% 10%;
+    width: 200%;
+    padding: 2% 9%;
     -webkit-box-shadow: 0 9px 2px -5px rgba(148,148,148,1);
     -moz-box-shadow: 0 9px 2px -5px rgba(148,148,148,1);
     box-shadow: 0 9px 2px -5px rgba(148,148,148,1);
 }
 
+.hamburger-menu {
+    max-width: 80rem;
+    width: 90%;
+    padding: 0 5%;
+}
 
+#header .container{
+    max-width: unset;
+    width: 100%;
+}
 
+#header .active-bg.container {
+    background: #E7E3DA;
+}
+
+#header .active-bg.container .logo-reverse {
+    display: none;
+}
 /*Tag hover*/
 
 .menu a, .menu.tag-hover span {

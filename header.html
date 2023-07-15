@@ -28,7 +28,7 @@
                 <ul class="sub-menu">
                     <li class="menu-item sub-item" ><a href="boarding-schools-reports.html">School Life</a></li>
                     <li class="menu-item sub-item" ><a href="boarding-schools-annual-agent-reports.html">Agent Reports</a></li>
-                    <li class="menu-item sub-item" ><a href="boarding-schools-labor.html">Chores</a></li>
+                    <li class="menu-item sub-item" ><a href="boarding-schools-labor.html">Children’s daily chores</a></li>
                     <li class="menu-item sub-item" ><a href="/">Senate Investigation</a></li>
                     <li class="menu-item sub-item" ><a href="/">Deaths</a></li>
                     <li class="menu-item sub-item" ><a href="boarding-schools-records.html">Records</a></li>
@@ -55,7 +55,7 @@
 
     <div class="tribune-logo">
     <a class="header-logo logo-default" title="The Salt Lake Tribune" href="https://www.sltrib.com/"><img class="masthead right" width="200px" src="images/Tribune-masthead.png" /></a>
-    <a class="header-logo logo-reverse" title="The Salt Lake Tribune" href="https://www.sltrib.com/"><img class="masthead right" width="200px" src="images/Tribune-masthead-rev.png" /></a>
+   <a class="header-logo logo-reverse" title="The Salt Lake Tribune" href="https://www.sltrib.com/"><img class="masthead right" width="200px" src="images/Tribune-masthead-rev.png" /></a>
     </div>
 
     <script src="js/jquery-3.4.1.min.js"></script>
@@ -66,12 +66,14 @@
 
 
         $(menuDrop).on( "mouseover", function() {
+            $('#header .container').addClass('active-bg');
             $('.menu-container li.nolink').removeClass('active');
             $(this).addClass('active');
         } );
 
         $(menuSub).on( "mouseout", function() {
             $('.menu-container li').removeClass('active');
+            $('#header .container').removeClass('active-bg');
         } );
 
     </script>
