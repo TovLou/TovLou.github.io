@@ -37,7 +37,7 @@ $(document).ready(function() {
 $(window).on('scroll', function () {
 
     var header = $('header');
-    var range = 200;
+    var range = 100;
 
     var scrollTop = $(this).scrollTop(),
         height = header.outerHeight(),

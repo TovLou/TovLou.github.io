@@ -133,6 +133,7 @@ a:hover, a:focus {
     position: relative;
     background: rgba(255,255,255,.5);
     border: none;
+
     padding: 0;
 }
 
@@ -276,16 +277,16 @@ p strong {
     padding:30px;
 }
 .padding-top {
-    padding-top: 50px;
+    padding-top: 5%;
 }
 .padding-bottom{
-    padding-bottom: 50px;
+    padding-bottom: 5%;
 }
 .padding-left {
-    padding-left: 50px;
+    padding-left: 5%;
 }
 .padding-right{
-    padding-right: 50px;
+    padding-right: 5%;
 }
 .margin-10 {
     margin:10px;
@@ -472,7 +473,7 @@ section img {
 
 header {
   position: relative;
-  padding: 8rem 0 6rem;
+  padding: 4rem;
   z-index: 35;
   text-align: center;
 }
@@ -974,7 +975,7 @@ figcaption .image-credit {
     }
 
     header {
-        padding: 4rem 0 2rem;
+        padding: 2rem 0;
     }
 
     #header li {
@@ -1150,6 +1151,22 @@ figcaption .image-credit {
     .padding-left, .padding-right {
         padding: 0;
     }
+
+    .xxlarge {
+        font-size: 18px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+    }
 }
 
 /* For mobile phones */
@@ -1162,7 +1179,8 @@ figcaption .image-credit {
 
     header h1 {
         font-size: 2.5rem;
-        padding: 2em 0 0 0;
+        padding: 1em 0 ;
     }
+
 
 }
