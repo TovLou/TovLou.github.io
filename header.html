@@ -2,7 +2,7 @@
 
 <div class='container'>
 
-        <div class="hamburger-menu">
+<!--        <div class="hamburger-menu">
             <input id="menu-toggle" type="checkbox" />
             <label class="menu-btn" for="menu-toggle">
                 <span></span>
@@ -14,10 +14,65 @@
                 <li><a class="menu-item" href="boarding-schools-resistance.html">Resistance</a></li>
                 <li><a class="menu-item" href="boarding-schools-today.html">Today</a></li>
             </ul>
-        </div>
+        </div>-->
+
+    <div class="top-menu hamburger-menu">
+        <input id="menu-toggle" type="checkbox" />
+        <label class="menu-btn" for="menu-toggle">
+            <span></span>
+        </label>
+
+        <ul class="menu-container">
+            <li><a class="menu-item" href="boarding-schools-main.html">Home</a></li>
+            <li class="menu-item nolink"><span>School Life</span>
+                <ul class="sub-menu">
+                    <li class="menu-item sub-item" ><a href="boarding-schools-reports.html">School Life</a></li>
+                    <li class="menu-item sub-item" ><a href="boarding-schools-annual-agent-reports.html">Agent Reports</a></li>
+                    <li class="menu-item sub-item" ><a href="boarding-schools-labor.html">Chores</a></li>
+                    <li class="menu-item sub-item" ><a href="/">Senate Investigation</a></li>
+                    <li class="menu-item sub-item" ><a href="/">Deaths</a></li>
+                    <li class="menu-item sub-item" ><a href="/">Records</a></li>
+                </ul>
+            </li>
+            <li  class="menu-item nolink"><span>Resistance</span>
+                <ul class="sub-menu">
+                    <li class="menu-item sub-item" ><a href="boarding-schools-resistance.html">Resistance</a></li>
+                    <li class="menu-item sub-item" ><a href="boarding-schools-annual-agent-reports.html">Reports of Resistance</a></li>
+                    <li class="menu-item sub-item" ><a href="boarding-schools-resistance-oral-histories.html">Oral Histories</a></li>
+                    <li class="menu-item sub-item" ><a href="boarding-schools-resistance-secola.html">Keith Secola Jr.</a></li>
+                    <li class="menu-item sub-item" ><a href="https://docs.google.com/spreadsheets/d/1H_I14SRz0Rw--ZnRHpbWoGwfgAu4owFMj04QBSM9qFI/edit#gid=0" target="_blank">Photos</a></li>
+                </ul></li>
+            <li class="menu-item nolink"><span>Today</span>
+                <ul class="sub-menu">
+                    <li class="menu-item sub-item" ><a href="boarding-schools-today.html">Today</a></li>
+                    <li class="menu-item sub-item" ><a href="boarding-schools-today-reporting.html">Tribune Reporting</a></li>
+                    <li class="menu-item sub-item" ><a href="boarding-schools-today-ungatavinekent-duncan.html">Kyri Ungatavinekent-Duncan</a></li>
+                    <li class="menu-item sub-item" ><a href="boarding-schools-today-dushane-navanick.html">Joseph DuShane-Navanick</a></li>
+                    <li class="menu-item sub-item" ><a href="https://www.scribd.com/document/657590666/Trib-Ute-Data#" target="_blank">Grades</a></li>
+                </ul></li>
+        </ul>
+    </div>
 
     <div class="tribune-logo">
     <a class="header-logo logo-default" title="The Salt Lake Tribune" href="https://www.sltrib.com/"><img class="masthead right" width="200px" src="images/Tribune-masthead.png" /></a>
     <a class="header-logo logo-reverse" title="The Salt Lake Tribune" href="https://www.sltrib.com/"><img class="masthead right" width="200px" src="images/Tribune-masthead-rev.png" /></a>
     </div>
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+
+    <script>
+        var menuDrop = $(".menu-item.nolink");
+        var menuSub = $(".sub-menu");
+
+
+        $(menuDrop).on( "mouseover", function() {
+            $('.menu-container li.nolink').removeClass('active');
+            $(this).addClass('active');
+        } );
+
+        $(menuSub).on( "mouseout", function() {
+            $('.menu-container li').removeClass('active');
+        } );
+
+    </script>
 </div>

@@ -420,7 +420,7 @@ nav {
 }
 nav ul {
   padding: 0;
-  margin: 0;
+  margin: -20px 0;
   list-style-type: none;
   float: left;
 }
@@ -441,9 +441,7 @@ nav a {
 nav a:visited {
     color: #645d52;
 }
-nav a:hover {
-  color: #833230;
-}
+
 
 #icon {
   display: inline-block;
@@ -553,6 +551,68 @@ header {
 
 .click-expand .expand-text {
 }
+
+/* top menu*/
+
+.menu-container{
+    width: 100%;
+}
+.menu-container > li.menu-item {
+    position: relative;
+}
+
+li.active.menu-item.nolink  {
+    width: 100%;
+}
+
+.menu-container > li {
+    display: inline;
+    cursor: pointer;
+}
+
+.menu-container > li:hover, .menu-container > li a:hover {
+    display: inline;
+    cursor: pointer;
+    color: #65757a;
+}
+
+.menu-container .sub-menu {
+    position: relative;
+    top:30px;
+    left: 10px;
+}
+
+.sub-menu {
+    display: none;
+}
+
+.active .sub-menu{
+    display: block;
+    padding-top: 20px;
+}
+
+.sub-menu li{
+    display: block;
+    padding: 10px !important;
+}
+
+nav li ul li {
+    text-align: left;
+}
+
+.menu-container .sub-menu {
+    background: #E7E3DA;
+    min-height: 260px;
+    left: -10%;
+    right: -10%;
+    width: 120%;
+    padding: 2% 10%;
+    -webkit-box-shadow: 0 9px 2px -5px rgba(148,148,148,1);
+    -moz-box-shadow: 0 9px 2px -5px rgba(148,148,148,1);
+    box-shadow: 0 9px 2px -5px rgba(148,148,148,1);
+}
+
+
 
 /*Tag hover*/
 
@@ -893,6 +953,15 @@ figcaption .image-credit {
         padding: 4rem 0 2rem;
     }
 
+    #header li {
+        Padding: 0;
+        text-align: left;
+    }
+
+    nav ul {
+        float: none;
+    }
+
     .content-warning {
         padding: 10% 5%;
     }
@@ -953,7 +1022,7 @@ figcaption .image-credit {
         visibility: hidden;
         top: 0;
         left: -100%;
-        width: 300px;
+        width: 400px;
         height: 100%;
         margin: 0;
         z-index: 99;
@@ -973,12 +1042,44 @@ figcaption .image-credit {
         transition-duration: .25s;
     }
 
+    a.menu-item:first-of-type {
+        padding: 20px 50px;
+    }
+
+    .menu-item  a, .sub-item  a {
+        color: #fff !important
+    }
+
+    .menu-container .sub-menu, .menu-container > li.menu-item {
+        position: unset;
+        background: none;
+        box-shadow: none;
+    }
+
+    .menu-container .sub-menu {
+        min-height: unset;
+    }
+
+    .menu-container > li a:hover {
+        display: block;
+        color: #E7E3DA;
+    }
+
+
+    li.menu-item.nolink span {
+        display: none;
+    }
+
     .left, .right {
         float: none;
     }
 
     nav a.menu-item:visited {
         color: #fff;
+    }
+
+    .sub-menu {
+        display: block;
     }
 
     .main-menu-slides, .flex-col-container {
