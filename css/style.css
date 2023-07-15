@@ -438,10 +438,9 @@ nav a {
   transition: all 0.3s;
 }
 
-nav a:visited {
+nav a:visited, .menu-item span {
     color: #645d52;
 }
-
 
 #icon {
   display: inline-block;
