@@ -389,7 +389,6 @@ header blockquote{
     border-left: none;
     border-right: none;
     text-align: justify;
-
     color: #e8e7e2;
     font-size: 1.5rem;
     line-height: 1.5;
@@ -473,7 +472,7 @@ section img {
 
 header {
   position: relative;
-  padding: 4rem;
+  padding: 4rem 2rem 3rem 4rem;
   z-index: 35;
   text-align: center;
 }
