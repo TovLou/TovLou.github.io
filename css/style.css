@@ -36,14 +36,14 @@ h1 {
 }
 
 header h1 {
-    font-size: 4rem;
+    font-size: 3rem;
     text-transform: uppercase;
     text-align: center;
     color: #E7E3DA;
 }
 
 h2 {
-    font-size: 2.5rem;
+    font-size: 2.1rem;
     font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
     color: #706e57;
     margin: 45px 0 35px 0;
@@ -109,9 +109,14 @@ a:hover, a:focus {
     padding: 0 40px 0 0;
 }
 
+#content-warning {
+    margin-bottom: 3%;
+    height: 50px;
+}
+
 .content-warning {
     position: relative;
-    background: rgba(255,255,255,.5);
+    background: rgba(255,255,255,1);
     margin: 0 24px;
     font-size: 16pt;
     z-index: 15;
@@ -131,7 +136,7 @@ a:hover, a:focus {
 
 .content-warning.collapse, .collapsed .content-warning {
     position: relative;
-    background: rgba(255,255,255,.5);
+    background: rgba(255,255,255,1);
     border: none;
 
     padding: 0;
@@ -281,6 +286,9 @@ p strong {
 }
 .padding-bottom{
     padding-bottom: 5%;
+}
+.padding-bottom20{
+    padding-bottom: 20px;
 }
 .padding-left {
     padding-left: 5%;
@@ -516,17 +524,21 @@ header {
 }*/
 
 #about, section.about  {
-    padding: 2% 0 1% 0;
     max-width: 80rem;
     width: 90%;
     margin: 0 auto;
+    padding: 1% 0;
 }
 
 #about p {
-  line-height: 2rem;
-  font-size: 1.4rem;
+  line-height: 1.6;
+  font-size: 1.2rem;
   margin: 0;
   padding: 1rem 0;
+}
+
+#about figure {
+    padding-top: 2%;
 }
 
 .click-expand {
@@ -609,12 +621,12 @@ nav li ul li {
 }
 
 .menu-container .sub-menu {
-    background: #E7E3DA;
+    background: #ffffff;
     min-height: 260px;
     left: -10%;
     right: -10%;
-    width: 200%;
-    padding: 2% 9%;
+    width: 120%;
+    padding: 0 9% 2% 9%;
     -webkit-box-shadow: 0 9px 2px -5px rgba(148,148,148,1);
     -moz-box-shadow: 0 9px 2px -5px rgba(148,148,148,1);
     box-shadow: 0 9px 2px -5px rgba(148,148,148,1);
@@ -623,20 +635,21 @@ nav li ul li {
 .hamburger-menu {
     max-width: 80rem;
     width: 90%;
-    padding: 0 5%;
+    margin: 0 auto;
+    padding: 0;
 }
 
 #header .container{
-    max-width: unset;
-    width: 100%;
+max-width: unset;
+width: 100%;
 }
 
 #header .active-bg.container {
-    background: #E7E3DA;
+background: #ffffff;
 }
 
 #header .active-bg.container .logo-reverse {
-    display: none;
+display: none;
 }
 /*Tag hover*/
 
@@ -773,6 +786,10 @@ nav li ul li {
 }
 .flex-col-100 {
     width: 75%;
+}
+
+.hide-desktop {
+    display: none;
 }
 
 .main-menu-slides a span:first-child {
@@ -970,16 +987,22 @@ figcaption .image-credit {
 @media only screen and (max-width: 768px) {
 
     header h1 {
-        font-size: 3.5rem;
+        font-size: 2rem;
+        padding-top: 5%;
     }
 
     header {
-        padding: 2rem 0;
+        padding: 1rem 0;
     }
 
     #header li {
         Padding: 0;
         text-align: left;
+        width: 300px;
+    }
+
+    nav {
+        position: relative;
     }
 
     nav ul {
@@ -1042,12 +1065,11 @@ figcaption .image-credit {
     }
 
     .menu-container {
-        position: fixed;
+        position: absolute;
         visibility: hidden;
         top: 0;
         left: -100%;
         width: 400px;
-        height: 100%;
         margin: 0;
         z-index: 99;
         padding: 80px 0;
@@ -1055,6 +1077,7 @@ figcaption .image-credit {
         background-color: #706e57;
         box-shadow: 1px 0 6px rgba(0, 0, 0, .2);
         transition-duration: .25s;
+
     }
 
     .menu-item {
@@ -1064,6 +1087,10 @@ figcaption .image-credit {
         font-size: 20px;
         text-decoration: none;
         transition-duration: .25s;
+    }
+
+    .menu-item  h4 {
+        font-size: 1.3rem;
     }
 
     a.menu-item:first-of-type {
@@ -1082,6 +1109,7 @@ figcaption .image-credit {
 
     .menu-container .sub-menu {
         min-height: unset;
+        width: 100%
     }
 
     .menu-container > li a:hover {
@@ -1130,7 +1158,9 @@ figcaption .image-credit {
     .mobile-unset {
         padding: unset;
         border: unset;
+        text-align: left;
     }
+
     .box {
         padding: 4%;
     }
@@ -1147,6 +1177,10 @@ figcaption .image-credit {
         display: none;
     }
 
+    .hide-desktop {
+        display: block;
+    }
+
     .padding-left, .padding-right {
         padding: 0;
     }
@@ -1160,11 +1194,29 @@ figcaption .image-credit {
     }
 
     h2 {
-        font-size: 1.6rem;
+        font-size: 1.7rem;
     }
 
     h3 {
         font-size: 1.3rem;
+    }
+
+    #about {
+        padding: 2rem 0;
+    }
+
+
+    #about h2 {
+        margin: 10px 0;
+    }
+
+    #about p {
+        line-height: 1.6;
+        font-size: 1rem;
+    }
+
+    .warning-toggle img {
+        width: 30px;
     }
 }
 
