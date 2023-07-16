@@ -116,7 +116,7 @@ a:hover, a:focus {
 
 .content-warning {
     position: relative;
-    background: rgba(255,255,255,1);
+    background: rgba(255,255,255,.5);
     margin: 0 24px;
     font-size: 16pt;
     z-index: 15;
@@ -136,7 +136,7 @@ a:hover, a:focus {
 
 .content-warning.collapse, .collapsed .content-warning {
     position: relative;
-    background: rgba(255,255,255,1);
+    background: rgba(255,255,255,.5);
     border: none;
 
     padding: 0;
@@ -1165,7 +1165,7 @@ figcaption .image-credit {
         padding: 4%;
     }
 
-    blockquote {
+    blockquote, header blockquote {
         text-align: left;
     }
 
@@ -1186,7 +1186,7 @@ figcaption .image-credit {
     }
 
     .xxlarge {
-        font-size: 18px;
+        font-size: 25px;
     }
 
     h1 {
@@ -1195,6 +1195,7 @@ figcaption .image-credit {
 
     h2 {
         font-size: 1.7rem;
+        margin: 10px 0;
     }
 
     h3 {
