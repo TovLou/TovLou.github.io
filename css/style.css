@@ -111,7 +111,7 @@ a:hover, a:focus {
 
 #content-warning {
     margin-bottom: 3%;
-    height: 50px;
+    min-height: 50px;
 }
 
 .content-warning {
