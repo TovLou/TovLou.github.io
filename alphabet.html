@@ -96,6 +96,18 @@
         align-self: auto;
         order: 0;
     }
+
+    #copy {
+        cursor: pointer;
+        background: blue;
+        color: #fff;
+        padding: 10px;
+        float: right;
+        width: 100px;
+    }
+    #output {
+        width: 80%;
+    }
 </style>
 </head>
 <body>
@@ -105,16 +117,15 @@
 
     <form id="myForm">
 	<input name="input" class="input1" id="input" cols="30" rows="10" placeholder="Text to convert to emoji">
-	<p id="output" class="output output1" autocorrect=off autocomplete=off></p>
-<!--
-	<button id="copy">copy</button><span id="msg"></span>
--->
+        <p id="copy">Copy</p>
+        <p id="output" class="output output1" autocorrect=off autocomplete=off></p>
+
+
 
     <h2>Emoji to Text</h2>
     <input name="input_emoji" class="input2"  id="input_emoji" cols="30" rows="10" placeholder="Emoji to convert to text">
     <p id="output_emoji" class="output output2" autocorrect=off autocomplete=off></p>
     </form>
-
     <button onclick="clearForm()">Clear/Reset</button>
 
 </div>
@@ -122,7 +133,20 @@
 
 <div id="alphabet">output</div>
 <!-- partial -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
   <script>
+
+         $('#copy').click(function() {
+              var textToCopy = $('#output').text();
+              var tempTextarea = $('<textarea>');
+              $('body').append(tempTextarea);
+              tempTextarea.val(textToCopy).select();
+              document.execCommand('copy');
+              tempTextarea.remove();
+          });
+
+
       const alphabet = {
           a: ["😀"],
           b: ["🙃"],
@@ -187,7 +211,6 @@
           "@": ["💧"],
           "...": ["⚓️"],
       };
-
       const alphabetRev = {
           "😀": ["a"],
           "🙃": ["b"],
@@ -254,28 +277,6 @@
       };
 
 
-
-      /*
-      function alphabet() {
-          for (let i = 0; i < residents.length; i++) {
-              for (let j in residents[i]) {
-                  document.write(j + ": " + residents[i][j] + "<br>");
-              }
-          }
-      }
-      */
-      /*
-      var html='';
-      for (var i=1; i<=100; i++) {
-          html+='<p>'+alphabet[i]+'</p>';
-      }
-      document.getElementById('log').innerHTML+= html;*/
-
-      /**
-       * Convert a character to its emoji equivalent
-       * @param  {character} c the character to convert
-       * @return {character}   the equivalent emoji
-       */
       function convert(c) {
           if (alphabet[c.toLowerCase()]) {
               const possibilities = alphabet[c.toLowerCase()];
@@ -330,7 +331,7 @@
 
       // copying
       // https://developers.google.com/web/updates/2015/04/cut-and-copy-commands?hl=en
-      const copyBtn = document.getElementById('copy');
+   /*   const copyBtn = document.getElementById('copy');
       copyBtn.disabled = !document.queryCommandSupported('copy');
       const msgText = document.getElementById('msg');
       copyBtn.addEventListener('click', function(event) {
@@ -351,7 +352,7 @@
           // Remove the selections - NOTE: Should use
           // removeRange(range) when it is supported
           window.getSelection().removeAllRanges();
-      });
+      });*/
   </script>
 <script>
     function clearForm() {
@@ -363,8 +364,7 @@
     function clearDiv() {
         document.getElementsByClassName("output").innerHTML = "";
     }
-</script>
-<script>
+
     // Get the div element by its id
     const outputDiv = document.getElementById('alphabet');
 
